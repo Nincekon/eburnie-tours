@@ -1,7 +1,8 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const db = require('./models/dbhelper')
+const db = require('./models/dbhelper');
+const authRoute = require('./routes/auth');
 
 const app = express();
 
@@ -13,5 +14,13 @@ app.use(
     })
 );
 
-app.use(cookieParser())
+// Route
+app.use("/api/auth", authRoute);
+
+app.use(cookieParser());
+
+const port = process.env.PORT;
+app.listen(port, (params) => {
+    console.log(`localhost:${port} - Exécution en cours`)
+});
 

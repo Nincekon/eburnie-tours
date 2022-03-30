@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 const { sequelize } = require('./dbhelper');
 
-const Registration = sequelize.define('registration',  {
-    username: {
-        type: Sequelize.STRING(35),
+const Registration = sequelize.define("registration", {
+    email: {
+        type: Sequelize.STRING(30),
         allowNull: false,
     },
     password: {
@@ -16,15 +16,16 @@ const Registration = sequelize.define('registration',  {
     },
 });
 
-exports.registration = (username, password, salt) => {
+exports.registration = (email, password, salt) => {
     return Registration.create({
-        username: username,
+        email: email,
         password: password,
         salt: salt,
     })
     .then(() => {
-        return "Bravo ! Un élément enregistré avec succès"
+        return "success"
     }).catch((error) => {
         console.log(`Ooohps !! Une erreur s'est produite : ${error}`)
+        return error;
     });
 };
