@@ -1,0 +1,45 @@
+{
+  "name": "eburnie-tours",
+  "version": "1.0.0",
+  "description": "Webapp to promote and discover Ivory Coast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nincekon/eburnie-tours.git"
+  },
+  "keywords": [
+    "Web",
+    "app",
+    "NodeJS",
+    "ReactJS",
+    "Côte",
+    "Ivoire",
+    "Ivory",
+    "Coast",
+    "Travelling",
+    "Hotel",
+    "People",
+    "Food",
+    "Safari",
+    "Lifestyle",
+    "Ivorian",
+    "Ivoirien"
+  ],
+  "author": "NYZ - Seeker225 AIJNWJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nincekon/eburnie-tours/issues"
+  },
+  "homepage": "https://github.com/Nincekon/eburnie-tours#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "nodemon": "^2.0.15"
+  }
+}
